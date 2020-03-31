@@ -1,0 +1,66 @@
+API Class 3:
+
+RestAssured - java based library to automate Rest APIs
+
+JSON - file that contains data that need to be exchanged 
+
+[ --> array
+	{ -ct-> obje
+		"id": "345",
+		"firstName": "John"	
+	}
+
+	{
+		"id": "346",
+		"firstName": "Jane"
+	}
+]
+
+
+Request: 
+	Parameters: 
+		path(/) --> continue of your endpoint using
+		query(?) --> comes after your path parameter Key=value (? page=2) to filter
+	Headers:
+	Body:
+
+Response: 
+	Status
+	Headers
+	Body
+
+Status code:
+200 - OK
+201 - Created
+400 -  Bad Request
+404 - Not Found
+500 - Internal Server Error
+
+This is URI:
+https://got-quotes.herokuapp.com/quotes?char=tyrion
+
+This is URL:
+https://got-quotes.herokuapp.com/quotes
+
+Hamcrest Matchers --> Library that used for data validtions/assertions
+
+
+{
+  "age": 0,
+  "attendanceNature": "string",
+  "batch": 0,
+  "batchEndDate": "yyyy-MM-dd",
+  "batchStartDate": "yyyy-MM-dd",
+  "city": "string",
+  "course": "string",
+  "firstName": "string",
+  "id": 0,
+  "lastName": "string",
+  "state": "string",
+  "streetAddress": "string",
+  "zipCode": "string"
+}
+
+Gson - is a java library that will convert 
+	- Java Object into JSON object --> serialization
+	- JSON Object into Java object --> deserialization

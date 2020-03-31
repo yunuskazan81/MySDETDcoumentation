@@ -1,0 +1,17 @@
+Feature: Login to OrangeHrm WebApplication
+
+
+Scenario: Login with valid credential
+
+
+
+Given User navigates and land to the login page
+When user sees login form is displayed
+Then user types valid username and password in the boxes
+And user clicks onto the login button
+Then user should succesfully login into the application
+And user should see username is written on the right top corner 
+And user should see the statement that username signed in on right top corner
+
+
+

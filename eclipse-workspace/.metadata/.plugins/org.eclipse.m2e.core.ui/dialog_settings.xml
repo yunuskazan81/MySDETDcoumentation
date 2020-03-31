@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="AndroidAppTest"/>
+			<item value="OrangeHrmFramework"/>
+			<item value="TestNGFramework_My"/>
+			<item value="My_TestNGFramework"/>
+			<item value="AppiumTestingAndroid"/>
+			<item value="AppiumTest"/>
+			<item value="Appium_Tests"/>
+			<item value="Appium"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="AndroidAppTest"/>
+			<item value="OrangeHrmFramework"/>
+			<item value="TestNGFramework_My"/>
+			<item value="My_TestNGFramework"/>
+			<item value="AppiumTestingAndroid"/>
+			<item value="AndroidTesting"/>
+			<item value="AppiumTest"/>
+			<item value="Appium_Mobile_Tests"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="/Users/yunuskazan/eclipse-workspace/JavaBasic"/>
+			<item value="/Users/yunuskazan/eclipse-workspace/AppiumTestingAndroid"/>
+			<item value="/Users/yunuskazan/eclipse-workspace/TestNGFramework"/>
+			<item value="/Users/yunuskazan/eclipse-workspace/Appium_Mobile_Testing"/>
+			<item value="/Users/yunuskazan/eclipse-workspace/SeleniumTestNG/src/TestNG/NewTest.java"/>
+			<item value="/Users/yunuskazan/eclipse-workspace/seleniumBasics"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

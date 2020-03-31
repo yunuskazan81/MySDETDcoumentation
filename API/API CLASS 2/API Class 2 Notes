@@ -1,0 +1,55 @@
+API Class 2:
+Recap;
+
+Application Architecture: 1, 2, 3
+API - middle man, connectivity, program that allows 2 different systems to communicate and exchange data
+
+WEbService - is an API that travels through Web/Internet
+
+Every WS is an API
+Not every API is WS
+
+Types of WS:
+	SOAP - uses XML to exchange data. SOAP is heavier and slow, but more secure
+	REST - uses many formats: JSON, XML, TEXT. REST is lighweight, fast, but less secure
+
+REST API, Restful WS
+REST support HTTP methods:
+	GET - retrives data from DB = Select
+	POST - creates new record in DB = Insert
+	PUT - updates/modifies existing record = Update
+	DELETE - deletes record from db =Delete
+
+CRUD operations = DML commands
+
+To test REST APIs we use:
+	manually : PostMan,SoapUi
+	Automation: RestAssured, HttpClient ....
+
+In API we alway send request and the validate response
+
+In response we have:
+
+	status code: 200, 201, 400, 404
+	body : in JSON or XML or Text format
+
+JSON - JavaScript Oject Notation
+		file used to exchange data b/w 2 systems
+
+In JSON we have {}, []
+
+{} --> JSON Object
+[] --> Array of JSON Objects
+
+Swagger - documentation of your REST APIs.
+
+2 type of parameters:
+	path - continue of your endpoin using / - to find your unique resource
+	query - comes after your path parameter and starts with ?key=value - to filter/sort items in your result
+
+https://www.google.com/search?q=iPhone
+
+
+https://github.com/SyntaxTechnologies?tab=followers
+
+https://www.amazon.com/s?k=plate

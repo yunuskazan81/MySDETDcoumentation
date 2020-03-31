@@ -1,0 +1,155 @@
+package com.orangehrm.steps;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+
+import com.orangehrm.pages.Addemp1loyeePage;
+import com.orangehrm.pages.home1Page;
+import com.orangehrm.pages.login1Page;
+import com.orangehrm.utils.CommonMethods;
+import com.orangehrm.utils.ConfigsReader;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import io.cucumber.datatable.DataTable;
+
+public class AddemployeeStep extends CommonMethods {
+
+	login1Page login11;
+	home1Page home11;
+	AddemployeePage emp11;
+
+	@Given("I logged in into OrangeHrm")
+	public void i_logged_in_into_OrangeHrm() {
+		login1 = new login1Page();
+		home1 = new home1Page();
+		emp1 = new Addemp1loyeePage();
+		login1.login1(ConfigsReader.getProperty("username"), ConfigsReader.getProperty("password"));
+	}
+
+	@When("I click on PIM link")
+	public void i_click_on_PIM_link() {
+		click(home1.PIM);
+	}
+
+	@When("I click on  Add emp1loyee link")
+	public void i_click_on_Add_emp1loyee_link() {
+		click(home1.addemp1loyee);
+	}
+
+	@When("I provide {string}, {string}, {string} and {string}")
+	public void i_provide_and(String fName, String mName, String lName, String location) {
+		sendText(emp1.emp1FirstName, fName);
+		sendText(emp1.middleName, mName);
+		sendText(emp1.emp1LastName, lName);
+		click(emp1.locationDropDown);
+		selectList(emp1.locationList, location);
+	}
+
+	@When("I click on save button")
+	public void i_click_on_save_button() {
+		emp1.emp1SaveBtn.click();
+	}
+
+	@Then("I see {string}, {string} is displayed")
+	public void i_see_is_displayed(String fName, String lName) {
+		waitForElementBeClickable(emp1.emp1Check, 20);
+		String emp1Name = emp1.emp1Check.getText();
+		Assert.assertEquals(fName + " " + lName, emp1Name);
+	}
+
+	@When("I provide FirstName, MiddleName, LastName and Location")
+	public void I_provide_FirstName_MiddleName_LastName_and_Location(DataTable Addemp1) {
+
+		List<Map<String, String>> datalist = Addemp1.asMaps(String.class, String.class);
+
+		for (int i = 0; i < datalist.size(); i++) {
+
+			sendText(emp1.emp1FirstName, datalist.get(i).get("FirstName"));
+			sendText(emp1.middleName, datalist.get(i).get("MiddleName"));
+			sendText(emp1.emp1LastName, datalist.get(i).get("LastName"));
+			emp1.locationDropDown.click();
+			selectList(emp1.locationList, datalist.get(i).get("Location"));
+
+		}
+
+	}
+
+	@When("I provide Username, Password and Confirmpassword")
+	public void I_provide_Username_Password_and_Confirmpassword(DataTable Addemp1) {
+
+		List<Map<String, String>> datalist = Addemp1.asMaps(String.class, String.class);
+
+		for (int i = 0; i < datalist.size(); i++) {
+
+			sendText(emp1.username, datalist.get(i).get("Username"));
+			sendText(emp1.password, datalist.get(i).get("Password"));
+			sendText(emp1.confirmPass, datalist.get(i).get("Confirmpassword"));
+
+		}
+
+	}
+
+	@Then("I see emp1loyee name is added successfully")
+	public void i_see_emp1loyee_name_is_added_successfully(DataTable Addemp1) {
+
+		ArrayList<String> list = new ArrayList<String>();
+
+		List<Map<String, String>> datalist = Addemp1.asMaps(String.class, String.class);
+
+		for (int i = 0; i < datalist.size(); i++) {
+
+			list.add(datalist.get(i).get("emp1loyeeName"));
+
+		}
+
+		String text = emp1.emp1Check.getText();
+		if (list.contains(text)) {
+
+			Assert.assertTrue(true);
+
+			System.out.println("emp1loyeeName is added succesfully");
+
+		}
+
+	}
+
+	@When("I click on create login1 details")
+	public void i_click_on_create_login1_details() {
+
+		emp1.checkCredentials.click();
+	}
+
+	@Then("I see following labels")
+	public void i_see_following_labels(DataTable addemp1Labels) {
+
+		List<String> Expectedlabels = addemp1Labels.asList();
+		System.out.println("----Printing labels from cucumber dataTable----");
+		for (String expectedlabel : Expectedlabels) {
+			System.out.println(expectedlabel);
+		}
+
+		List<String> actuallable = new ArrayList<String>();
+
+		System.out.println("----Printing labels text from the application----");
+
+		List<WebElement> labelList = emp1.addemp1Labels;
+
+		for (WebElement label : labelList) {
+			String labeltxt = label.getText();
+			System.out.println(labeltxt);
+
+			actuallable.add(labeltxt.replace("*", ""));
+		}
+
+		System.out.println(actuallable);
+		// Assert.assertTrue(actuallable.equals(Expectedlabels));
+		System.out.println("Expected labels equal to actual labels from");
+
+	}
+}

@@ -1,0 +1,13 @@
+cd ~
+  132  ls
+  133  mkdir gitDayTwo
+  134  cd gitDayTwo/ls
+  135  cd gitDayTwo
+  136  vi daytwo.txt
+  137  git init 
+  138  git add daytwo.txt 
+  139  git status
+  140  git commit -m"my first commit"
+  141  git status
+  142  git remote add origin https://github.com/ArifHatim12345678/gitDayTwo.git
+  143  git push -u origin master

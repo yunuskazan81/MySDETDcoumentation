@@ -1,0 +1,41 @@
+Cucumber Class 3
+
+	Feature File - in this file we describe behavior of the system/ writing our test cases in Gherkin format using Gherkin keywords:
+		Given - precondition
+		When - action
+		Then - result/outcome
+		And  - continious precondition/action/result
+	
+	Step Definitions  - we define steps from feature file/write code using Selenium/Java. We have only 1 definition per step
+
+	Runner Class - execution class to run specific/all features
+	Here we define cucumber options (test configurations)
+	dryRun - check if all steps have been implemented
+	monochrome - makes console output more readable
+	tags - specify which particular scenario/scenarios we want ot run/skip
+	glue - path to step definitions
+	features - path to feature file we want to execute
+	plugin - we can specify different type of plugins for our reports
+	To run our test cases we need TestNG or JUnit and we are using JUnit to run tests and do assertions
+
+Hooks - block of code that will be executed before and after each scenario in each feature file (hooks are global concept that works for every scenario in the entire project)
+
+Hooks are placed inside step definitions, howevee they DO NOT provide denition to any of the steps. 
+
+Feature defines the flow of the test case/execution
+Step Definition simply contains of tagged methods and based on the step it find matching tagged method and then code inside that method is getting executed
+
+Background Keyword - used if you have any repetitive steps (begiining/precondition) in your feature file, then those step can be placed under Background. (Local concept/means it is local ONLY FOR THAT PARTICULAR feature file)
+
+Let's say 2 scenario need to be executed from same feature file
+	Hooks(@Before)--> Background-->steps in first scenario-->Hooks(@After)
+
+	Hooks(@Before)--> Background-->steps in second scenario-->Hooks(@After)
+
+To perform DDT in cucumber we can use
+	1. Scenario Outline  - we have to define Examples keyword where we specify our test data. And based on the amount of test data ENTIRE Scenario will get executed #times
+
+HW:
+1. Automate  Scenario: Add Employee and Create Login Details
+2. Complete Scenario: Add Employee Labels Verification--> compare 2 ArrayList
+3. Learn how to retrieve values from cucumber datatable as MAP

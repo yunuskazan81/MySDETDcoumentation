@@ -1,0 +1,19 @@
+package com.orangehrm.steps;
+
+import cucumber.api.java.en.*;
+
+public class OrangeHrmLoginSteps {
+
+	
+	@Given("User navigates and land to the login page")
+	
+	public void User_navigates_and_land_to_the_login_page() {
+		
+		
+		
+	}
+	
+	
+	
+	
+}

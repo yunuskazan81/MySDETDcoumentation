@@ -1,0 +1,23 @@
+package com.orangehrm.runners;
+
+import org.junit.runner.RunWith;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		features= "/Users/yunuskazan/eclipse-workspace/OrangeHrmFramework/src/test/resources/features/OrangeHrmLogin.feature",
+		
+		glue= {"OrangeHrmLoginSteps"}
+		
+		
+		
+		)
+
+
+public class OrangeHrmRunner {
+	
+	
+	
+
+}

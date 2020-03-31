@@ -1,0 +1,57 @@
+Class 5
+
+To read Excel
+
+FileInputStream
+Workbook
+Sheet
+Rows & cells
+
+To write to Excel
+
+FileInputStream
+Workbook
+Sheet
+
+if (!row)
+
+	sheet.createRow(#).createCell(#).setCellValue("")
+
+else {
+	
+	if (!cell) {
+		sheet.getRow(#).createCell(#).setCellValue("")
+	}
+}
+
+FileOutputStream fos = new FileOutputStream(xlPath);
+workbook.write(fos);
+
+fos.close
+workbook.close
+fis.close
+
+How to pass data from excel into @DataProvider
+
+FileInputStream
+Workbook
+Sheet
+
+get # of rows and colls
+
+int rows = sheet.getPhysicalNumberOfRows();
+
+int cols = sheet.getRow(0).getLastCellNum();
+
+Object[][] data=new Object[rows-1][cols];// we do not want to store data of header
+
+for (int i=1; i<rows; i++) {
+	
+	for (int j=0; j<cols; j++) {
+
+		String value=sheet.getRow(i).getCell(j).toString();
+
+		data[i-1][j]=value;// data[0][0];
+
+	}
+}

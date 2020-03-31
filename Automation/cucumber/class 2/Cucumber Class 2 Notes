@@ -1,0 +1,27 @@
+Cucumber Class 2
+
+Some of the agile tools:
+	JIRA
+	Trello
+	Rally
+	AGM  - agile management tool
+
+HpAlm - management tool that allows to store requirement, test cases and defect
+
+US 10990 - As an admin I want to login into OrangeHrm
+
+Acceptance criteria:
+
+1) Valid login
+Given I navigated to OrangeHrm
+And I see OrangeHrm logo
+When I enter valid username and password
+And I click login button
+Then I successfully logged in 
+
+2) Invalid login
+Given I navigated to the OrangeHrm
+And I see OrangeHrm logo
+When I enter invalid username and password
+And I click login button
+Then I see error message is displayed

@@ -1,0 +1,32 @@
+package TryReplHomeworkHere;
+
+public class newClass {
+
+}
+
+class Main2 {
+	  public static void main(String[] args) {
+	    
+		  Y obj= new Y ();
+		  
+	    obj.methodX ();
+	    
+	  }
+
+	}
+
+	class X {
+	  
+	public  static String methodX() {
+	    System.out.println ("Class X");
+	    return "Class X";
+	  }
+	}
+
+	class Y extends X {
+	  
+	public  static String methodX (){
+	    System.out.println("Class Y");
+	 return "Class X";
+	}
+	}

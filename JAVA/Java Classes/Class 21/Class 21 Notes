@@ -1,0 +1,23 @@
+Variables in Java:
+1. Local - declared and accessed ONLY inside method, constructor, block
+
+	public void hello(String name) {
+		name="Jack";
+		System.out.println("Hello "+name);
+	}
+
+	CANNOT BE USED WITH ACCESS MODIFIERS AND CANNOT BE STATIC
+	dataType name
+
+2. Instance (global) - declared inside the class but outside of method, constructor or clock; accesible within a class
+
+	private String name="John";
+
+	instance variable CAN BE USED WITH access modifiers
+
+3. Static/Class (global) - declared inside the class but outside method, constructor or block and they use STATIC keyword
+
+	static String breed="Husky";
+	static int paws=4;
+
+	static/class variable CAN BE USED WITH access modifiers

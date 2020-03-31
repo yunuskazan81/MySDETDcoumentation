@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;TestNFramework&apos; to &apos;TestNGFramework&apos;" description="Rename resource &apos;TestNFramework&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/TestNFramework" name="TestNGFramework" stamp="1560006030665" updateReferences="true"/>
+</session>

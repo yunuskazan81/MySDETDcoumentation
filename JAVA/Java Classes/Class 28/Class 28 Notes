@@ -1,0 +1,20 @@
+Class 28
+
+Abstract class can have:
+1. static variables
+2. instance varibales
+3. constructor (since we have instance variables and those needs to be initialized)
+4. void or non-void(string, int etc.) return type
+
+Abstract keywords is applicable ONLY for: classes and methods
+
+Interface:
+1. Interface CAN have ONLY undefined methods(abstract)
+2. By default all methods are PUBLIC ABSTRACT
+3. by default all variables inside the interface are PUBLIC STATIC FINAL
+4. We CANNOT have instance variables
+		variables -->by default it will be public static final
+		methods --> public & abstract
+5. We CANNOT have STATIC methods as abstract
+6. Interface CANNOT have a CONSTRUCTOR
+7. We CANNOT create an Object of a Interface

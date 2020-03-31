@@ -1,0 +1,44 @@
+Class 12
+
+To take screesnot in Selenium we use TakesScreenShot interface
+
+1. TakesScreenShot ts=(TakeScreenShot)driver;
+2. File src=ts.getScreenShotAs(OutputType.File);
+3. FileUtils.copyFile(src, dest);
+
+Upload & Download
+The simpliest way to upload file is to use .sendKeys(path to file)
+or use Robot class from Selenium, or other tools such as AutoIT or Sikuli
+
+JavaScriptExecutor
+
+If click or send keys doesnt work we can use JS to perform action on that element. Also we can scroll up and down the page.
+
+JavaScriptExecutor js=(JavaScriptExecutor)driver;
+js.executeScript("...", " ");
+
+Advanced xPath
+
+If element doesn not have unique identification we can isendtified based on the 
+
+1. Parent - if parent is unique then we can easily traverse to child and identified
+
+parenXpath/childTagName
+
+2. Child - if child element is uniques then we can easily identify parent/ grandParent
+
+chilXpath/.. --> parent /.. --> will take to grandParent
+
+3. Siblings:
+
+Preceding: if the older sibling doesnt have unique identification, then we can
+
+	yongerXpath/preeding-sibling::olderTagName
+
+Following: if the yonger sibling doesnt have uniques identification then that element can be identified based on the older sibling
+
+	olderXpath/following-sibling::yongerTagName
+
+XPATH for 2 row and 3 column
+
+//table/tbody/tr[2]/td[3]

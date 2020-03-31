@@ -1,0 +1,103 @@
+package com.orangehrm.steps;
+
+
+
+import com.orangehrm.pages.AddEmployeePage;
+import com.orangehrm.pages.HomePage;
+import com.orangehrm.pages.LoginPage;
+import com.orangehrm.utils.BaseClass;
+import com.orangehrm.utils.CommonMethods;
+import com.orangehrm.utils.ConfigsReader;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import org.junit.Assert;
+
+
+
+public class OrangeHrmAddEmployeeSteps extends BaseClass{
+	
+LoginPage page;	
+HomePage home;
+AddEmployeePage add;
+	@Given("I logged in with valid username and password into OrangeHrm")
+	public void i_logged_in_with_valid_username_and_password_into_OrangeHrm() {
+	
+		
+		page=new LoginPage();
+		page.Login(ConfigsReader.getProperty("username"), ConfigsReader.getProperty("password"));
+		
+//	    setUp();
+//	    driver.get(ConfigsReader.getProperty("url"));
+//	    page=new LoginPage();
+//	    CommonMethods.sendText(page.userName, ConfigsReader.getProperty("username"));
+//	    CommonMethods.sendText(page.password, ConfigsReader.getProperty("password"));
+//	    page.btnLogin.click();
+	    
+	    
+	}
+
+	@When("I clicked on PIM link")
+	public void i_clicked_on_PIM_link() {
+		home=new HomePage();
+		home.PIM.click();
+		
+		
+	   
+	}
+
+	@When("I clicked on AddEmployee link")
+	public void i_clicked_on_AddEmployee_link() {
+		home=new HomePage();
+		home.addEmployee.click();
+	 
+	}
+
+	@Then("I see pop up add employee form")
+	public void i_see_pop_up_add_employee_form() {
+		add=new AddEmployeePage();
+	   Boolean confirmPopup=add.confirmAddEmployeePopup.isDisplayed();
+	   
+	   Assert.assertTrue(confirmPopup);
+	   
+	   System.out.println("Pop up is shown up");
+		
+	}
+	
+	@Then("I fill out the required field on the form")
+	public void i_fill_out_the_requiered_field_on_the_form() {
+		add=new AddEmployeePage();
+		CommonMethods.sendText(add.EmpFirstName, "Yunus");
+		CommonMethods.sendText(add.EmpLastName, "Kazan");
+		CommonMethods.sendText(add.middleName, "Y");
+		add.locationList.click();
+		CommonMethods.selectList(add.locationList, "London Office");
+		CommonMethods.sendText(add.EmployeeID, "0012");
+		
+	   
+	}
+
+	@Then("I clicked on the save button")
+	public void i_clicked_on_the_save_button() {
+		add=new AddEmployeePage();
+	  add.EmpSaveBtn.click();
+	}
+
+	@When("I click on Employee List link")
+	public void i_click_on_Employee_List_link() {
+		add=new AddEmployeePage();
+		add.employeeList.click();
+	   
+	}
+
+	@When("I see the new employee on the list")
+	public void i_see_the_new_employee_on_the_list() {
+		add=new AddEmployeePage();
+		String name=add.CheckName.getText();
+	
+		Assert.assertEquals("Yunus Y Kazan", name);
+		System.out.println("Employee name is verified");
+	}
+
+}

@@ -1,0 +1,30 @@
+Interview Day 3
+
+D2D - day to day activity
+COB - close of bussiness
+FYI - for your informations
+WFH - work from home
+PTO - paid time off
+EOD - End of the day
+
+	1. Check emails outlook
+	2. Check progress of user story/ bug/ check result of smoke & regression
+	3. Stand up 
+	if Sprint is 2 weeks 
+		Sprint Planning - 2 hours
+
+	if Sprint is 3 weeks 
+		Sprint Planning - 2-4 hours
+
+	4. Analyze user stories, write test cases, prepare test data
+	5. Execute manual test cases, report any found bugs (JIRA)
+	6. if (bug) --> report and check on status ant hen retest
+		else 
+
+	7. Automate the test case
+	8. Update status in Jira to done
+	9. Framework enhancements
+	10. Srint Demo - 30 - 1 hour 
+	11. Sprint Retro - 30 -1 hour
+	12. Attend QA Meetings - 1 hour every Monday
+	13. Attend Code review meeting - 1 hour 

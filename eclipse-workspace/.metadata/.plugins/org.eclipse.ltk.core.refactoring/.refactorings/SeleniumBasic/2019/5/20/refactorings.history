@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.clasSe3.relativeXpath&apos; to &apos;absoluteXpath2&apos;&#x0A;- Original project: &apos;SeleniumBasic&apos;&#x0A;- Original element: &apos;com.clasSe3.relativeXpath&apos;&#x0A;- Renamed element: &apos;com.clasSe3.absoluteXpath2&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;relativeXpath&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.clasSe3{relativeXpath.java[relativeXpath" matchStrategy="1" name="absoluteXpath2" qualified="false" references="true" similarDeclarations="false" stamp="1557886293818" textual="false" version="1.0"/>
+</session>

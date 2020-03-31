@@ -1,0 +1,64 @@
+SQL Notes
+
+FrontEnd - UI user interface
+BackEnd - (Server + Database)
+
+DataBase:
+	Relational DB:Oracle, SqlServer, MySql, DB2. SyBase
+	Non Relational DB:MongoDB
+
+PK - unique column to identify table
+FK - existence of PK in another table
+
+SQL Developer is an IDE to work with Oracle DB
+other IDEs to work with different db: dbeaver, dbvizualizer
+
+SQL 
+
+Select - statement used to retrieve data;
+Where statement/clause - used to apply condition
+
+SELECT COLUMN_NAME
+FROM TABLE_NAME
+WHERE COLUMN_NAME =,>,< 'CONDITION' LIKE, OR, AND, IN, BETWEEN COLUMN_NAME='CONTIDION'
+
+FUNCTIONS
+	SINGLE ROW - UPPER, LOWER, INITCAP
+	MULTIPLE ROW (AGGREGATE) - MAX, MIN, AVG, COUNT, SUM
+							GROUP BY
+							HAVING 
+SQL JOINS:
+
+	INNER: RETRIEVES MATCHING DATA FROM 2 OR MORE COLUMNS
+	OUTER: LEFT
+			RIGHT
+			FULL
+	SELF JOIN
+
+SET:
+	UNION ALL - COMBINES INFO FROM 2 TABLES DOESNT NOT SORT DOESNT REMOVE DUPLICATES
+	
+	UNION - COMBINES INFO FROM 2 TABLES SORT AND REMOVE DUPLICATES
+	MINUS - SHOWS UNIQUE INFO FROM YOUR FIRST QUERY
+
+	ABCD
+	DCZF
+	MINUS
+	=AB
+
+	INTERSECT - COMMON DATA BETWEEN 2 QUERIES
+
+	HJKL
+	HJMN
+	INTERSECT
+	= HJ
+
+
+
+
+
+
+
+
+
+

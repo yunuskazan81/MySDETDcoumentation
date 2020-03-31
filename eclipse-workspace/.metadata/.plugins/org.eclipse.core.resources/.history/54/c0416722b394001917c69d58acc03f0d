@@ -1,0 +1,15 @@
+@tag
+Feature: Add Employee in OrangeHRM
+
+ 
+
+  @tag1
+  Scenario: Add Employee by fill out requiered field 
+    Given I logged in with valid username and password into OrangeHrm 
+    When I clicked on PIM link 
+    And I clicked on AddEmployee link 
+    Then I see pop up add employee form
+    Then I fill out the required field on the form
+    And I clicked on the save button
+    When I click on Employee List link
+    And I see the new employee on the list

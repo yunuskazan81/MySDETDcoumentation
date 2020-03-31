@@ -1,0 +1,66 @@
+API Class 1:
+
+Application Architechture:
+
+1 Tier/Layer - desktop (client + server available on 1 system) 
+2 Tier/Layer - client + database server (located on separate system)
+3 Tier/Layer - client  + application server + database server
+		presentation layer/ bussiness/ application layer/ data layer
+
+Any application that travels through HTTP (web) = 3 tier 
+
+Client - is computer/program that access UI
+
+Presentation Layer --> GUI --> will use HTML, CSS, JavaScript
+Application Layer --> will use Java using Spring Framework, C# using .NET framework, Python ...
+Data Layer --> Database: Oracle, MySQL, SQL Server..
+
+To test presentation Layer --> GUI we use QTP/UFT or Selenium tools
+To test application Layer --> API we use RestAssured tools for automation and for manual we will use PostMan or SoapUi/SoapUi Pro
+
+To test data Layer --> DataBase we use JDBC
+
+in API we always talk about communication
+
+CLIENT --> SERVER
+Request --> Response
+
+API are of different types:
+1) 
+Selenium APIs
+JDBC APIs
+RestAssured APIs --> this APIs available in a form of Jars
+
+2) APIs that travel through the Web called WebServices (Exanging data between 2 system happens through the Web).
+
+All WebServices are APis , but not all APIs are WebServices.
+
+2 Type of WebServices:
+	SOAP - Simple Object Access Protocol	
+			Data Exhanges only in XML format
+
+	REST - Representational State Transfer
+		Data Exhanges different formats: JSON, XML, Text, Html ...
+
+Different HTTP methods that support in REST
+
+POST	--> 	C - Create = Insert
+GET		--> 	R - Retrieve = Select
+PUT		--> 	U - Update = Update
+DELETE	--> 	D - Delete = Delete
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

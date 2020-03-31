@@ -1,0 +1,39 @@
+Class 30
+
+Array -  allows to store multiple values of same type.
+
+		int[] array= {10, 20, 30, 40};
+		int[] intArray=new int[3];//size of an array
+		intArray[0]=10;
+		intArray[1]=20;
+		intArray[2]=30;
+
+Limitation of an Array
+1. Size is fixed - we cannot changed once we declare it
+2. Can store only homogeneous values
+
+Collection - is a group of objects represented as a single entity
+(group of student objects, group of pen)
+
+Wrapper Classed used to wrap primitive data types and present them as an object
+
+for each primitive dataType we have respective WrapperClass
+
+To represent group of Objects we have a collection:
+Collection consist of: Interface
+						Classes
+
+Methods of All COLLECTIONS:
+.add - adding an obejct to the collection
+.size - getting a size of the collection
+
+LIST - is an ORDERED Collection that can have duplicate values
+
+Methods of ArrayList:
+.get(index) - accessing an element at the specified index
+.set(index, value) - replace value at specified index
+
+Benefits of a Collection:
+1. Dynamic is size
+2. Can store homogeneous and heterogeneous values
+3. There are pleanty of methods available to manipulate data in your collection

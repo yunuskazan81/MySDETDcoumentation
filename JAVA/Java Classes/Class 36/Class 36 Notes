@@ -1,0 +1,76 @@
+Class 36
+
+try {
+	
+	1.some code that might throw an Exception;--> new some ExceptionObject
+	2.another code that might throw an Exception;
+
+}catch (some ExceptionClassName refVar) {
+	SOPln(refVar.getMessage());--> details/description of the E
+	SOPln(refVar);             --> name +details of the E
+	refVar.printStackTrace();  --> name+details+location of the E
+
+}catch (another ExceptionClassName refVar) {
+	
+}finally {
+	
+	some cleanUp code;
+}
+
+SOPln("End of code..")
+
+----------------------------------
+
+try {
+	12/0;--> new ArithmeticException();
+}finally {
+	some cleanUp code;
+}
+
+SOPln("End of code..")--> no chance to execute
+
+try {
+		someCode();
+
+		try{
+			someCode();
+
+		}catch(){
+
+		}
+
+}catch(){
+	
+}
+
+---------------------------------------
+THROWS - is a keyword that used to deligate responsibilty of handling an E to caller (other method or JVM).
+
+	public static void studentSleeping() throws InterruptedException {
+		System.out.println("Student "+name+" is sleeping");
+		Thread.sleep(3000);
+		System.out.println("Give some coffee..");
+	}
+	
+	public static void allStudentsSleeping() throws InterruptedException {
+		studentSleeping();
+	}
+
+THROW - is a keyword that is used to manually throw a custom exception
+
+THROW vs THROWS
+
+1. THROWS - is a kyeword that used to deligate responsibilty of handling an E to caller (other method or JVM) wheres THROW - is a keyword that is used to manually throw a custom exception
+
+2. THROWS is specified at the METHOD SIGNATURE, while THROW inside the METHOD body
+
+3. THROW is followed by an instance /object, while THROWS is followed by a ClassName
+
+String is a sequince of charactes and it is IMMUTABLE Object (non changeable)
+
+
+STRING is an IMMUTABLE object while STRINGBUFFER is MUTABLE object
+IMMUTABLE - means unchangeable
+MUTABLE - means changebale
+
+EVERYTIME we modify a String there is NEW Object is getting created

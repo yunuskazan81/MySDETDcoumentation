@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 2 elements from workspace&#x0A;- Original elements:&#x0A;     com.class11.newgroupwork.java&#x0A;     com.Study1.toCreateBarcodePrograming.java" description="Delete elements" element1="=OcpStudy/src&lt;com.Study1{toCreateBarcodePrograming.java" element2="=JavaBasic/src&lt;com.class11{newgroupwork.java" elements="2" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1553993891664" subPackages="false" version="1.0"/>
+</session>

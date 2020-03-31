@@ -1,0 +1,149 @@
+Class 9
+
+Alerts
+Frames
+Windows
+Actions
+
+IQ: How would you handle pop up - web based pop ups/ js alerts can be nadled using Alert Interface
+
+Pop ups/ JS Alerts:
+simple - ok
+confirmation - ok & cancel
+prompt - sendText
+
+Alert alert=driver.switchTo().alert();
+alert.accept();
+alert.dismiss();
+alert.getText();
+alert.sendKeys();
+
+if no Alert Present we get NoAlertPresentException
+
+IQ: How would you handle element that is located inside the frame
+
+We need to switch our focus that that particular frame
+
+driver.switchTo().frame(......);, "nameValue"
+
+Ways to switch to the frame:
+ - id or name 
+ 	driver.switchTo().frame("idValue"/"nameValue");
+
+ - WebElement frame
+
+ 	WebElement frame = river.findElement(by.css/xpath("..."));
+ 	driver.switchTo().frame(frame);
+
+ - index
+
+ 	driver.switchTo().frame();
+
+Switch back to the main window/frame/control
+
+driver.switchTo().defaultContent
+ --------------------------------------
+
+Logic to handle element in the frame
+1. switch to frame
+2. identify element and perform action
+3. switch to default content (switch to main window)
+4. identify element and perform action
+5. switch to frame
+6. identify element and perform action
+7. switch to default content (switch to main window)
+
+-------------------------------
+
+IQ: how would handle multiple window
+
+Set<String> allWindows=driver.getWindowHandles();
+
+Logic to handle windows:
+1. get parent id
+
+ 	String parentId = driver.getWindowHandle();==123
+
+2. get all window handles
+
+	Set<String> allWindows=driver.getWindowHandles();
+
+3. Loop/Iterator throuh all strings in the set
+
+	Iterator<String> it=allWindows.iterator();
+
+	while(it.hasNext){
+
+		String childId=it.next();==123; ==789
+
+		if(! parentId.equals(childId)) {
+
+			driver.switchTo().window(childId);
+			System.out.println(driver.getTitle());
+			driver.findElement(By.linkText(".....")).click();
+			driver.close();
+			driver.switchTo().window(parentId);
+		}
+	}
+Switch command applicable:
+	alerts
+	frames
+	windows
+
+---------------------------------------------------
+
+To perform keyboard and mouse operations we use Actions class
+
+IQ: How would you perform right click/ double click/ hover over/ drag&drop
+
+ - by using Actions Class
+
+ Actions action=new Actions(driver);
+ //right click
+ action.contextClick(element).perform();
+ //double click
+ action.doubleClick(element).perform();
+ //drag & drop
+ action.dragAndDrop(source, target).perform();
+----------------------------------------------------------
+CTRL+O (COMMAND+O)--> will give all methods that are present in THAT class
+
+Synchronization is a procees of matching a speed of applications (responce time) with the automation tools (Selenium, QTP)
+
+Synchronization:
+
+	unconditional --> Thread.sleep
+	conditional --> we can specify the time and condition
+
+pageLoadTimeout - wait for all elements in DOM to get fully loaded
+
+Applicable for page when we use .get() & .navigate()
+
+Selenium Waits:
+
+ Implicit Wait - it is global wait , that will wait specified amount of time before it throws NoSuchElementException
+
+ driver.manage().timeouts().implicitlyWait(30, TimeUnit.Seconds);
+
+Implicit Wait applicable only for findElement() & findElements();
+
+If we do not specify Implicit wait, the default value is=0;
+
+ It will look for the element and wait additionally 30 seconds before throwing NoSuchElementException if element won't be present
+ If element appears faster --> then rest of the time is ignored
+
+
+ Explicit Wait : WebDriver Wait
+
+ WebDriverWait will work only with specified element 
+ WebDriverWait will work with some ExpectedConditions
+
+ ExpectedConditions is class that will have many options/methods:
+
+ 	elementToBeClickable();
+ 	visibilityOfElement();
+ 	textToBePresentInElement()	
+
+ 				
+
+ 				Fluent Wait

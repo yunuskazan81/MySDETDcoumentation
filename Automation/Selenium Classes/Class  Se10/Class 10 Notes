@@ -1,0 +1,38 @@
+Class 10:
+
+When automation TC fails:
+	 check where exactly your code failed
+	 debug
+	 check if element is not being changed
+	 look into the function
+	 check if you need to add some more time for wait
+
+What is the value of value attribute in the text box
+The value of value attribute is always an entered text
+
+<input id="loginbtn"> -before you enter the text inside textbox
+
+driver.findElement(By.id("loginbtn")).sendKeys("my text");
+
+<input id="loginbtn" value="my text"> - after you enter text
+
+Implicit vs Explicit
+Implicit is global and applicable for all elements
+Wxplicit is for specific element and work with Expected conditions
+
+WebTable represent data in a form or rows and columns
+
+<table>
+	<thead>
+		<tr>
+			<th>FirstName</th>
+			<th>LastName</th>
+	<tbody>
+		<tr1>
+			<td1>John</td>
+			<td2>Smith</td>
+		<tr2>
+			<td>Anna</td>
+			<td>Smith</td>
+	<tfoot>
+</table>

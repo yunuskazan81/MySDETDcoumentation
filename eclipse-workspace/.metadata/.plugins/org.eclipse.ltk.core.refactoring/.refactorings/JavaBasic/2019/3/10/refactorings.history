@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;scanner&apos; from expression &apos;payment=new Scanner(System.in)&apos;&#x0A;- Original project: &apos;JavaBasic&apos;&#x0A;- Variable name: &apos;scanner&apos;&#x0A;- Destination method: &apos;com.class7.classWhileLoopHomework.main()&apos;&#x0A;- Variable expression: &apos;payment=new Scanner(System.in)&apos;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;scanner&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;com.class7{classWhileLoopHomework.java" name="scanner" replace="true" selection="440 31" stamp="1552174998219" varType="false" version="1.0"/>
+</session>

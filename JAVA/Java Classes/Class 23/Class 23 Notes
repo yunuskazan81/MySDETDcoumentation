@@ -1,0 +1,23 @@
+CLASS 23
+
+Private members(variables & methods DO NOT get inherited)
+
+Protected vs Default:
+Protected members (variables & methods) can be accessed from different package through inheritance ONLY 
+default values cannot be access in different package
+
+Multiple Inheritance is NOT available through the classes
+Polymorphism - ability of Object to take/have many forms/behaviours
+
+2 types of polymorphism:
+1. compile time polymorphism/static binding/early binding--> achieved through METHOD OVERLOADING
+2. runtime polymorphism/dynamic binding/late binding--> achieved trhough METHOD OVERRIDING
+
+OVERLOADING: - METHOD - (by changing #of parameters OR dataType of 	parameters)
+			 - CONSTRUCTOR
+
+IQ: can we overload a constructor?
+	-yes (by changing #of parameters OR dataType of parameters)
+
+IQ: can we overload a main method?
+	-yes (by changing #of parameters OR dataType of parameters)

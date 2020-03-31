@@ -1,0 +1,42 @@
+Class 4
+
+DataDriven Testing 
+	testing 1 functionality with multipe set of data
+
+	seperate data from the script
+
+Once we store data into external file(Excel) we need to bring to our code
+
+1. Read data from Excel and using loop iterate the script
+2. Read data from Excel and paste it into DataProvider
+
+
+Framework:
+Maven project:
+
+3 packages: 
+
+	pages - creating java classes for each page of our application to store element for that respective page and methods that can be perforemed on those element. We store elements using @FindBy and initilaize them using PageFactory
+
+	test cases - writing our test cases using testNG @Test and assertions
+
+	utils
+	-	Base Class - using @BeforeMethod we initialize webdriver and navigate to the specified url and we have @AfterMethod to close the browser
+
+		initialize report - 
+
+	- CommonMethods- generic functions to perform on browser
+
+	- Constants - final variables such as path to credentials, test data
+
+	- ConFigsReader - reading and retrieving test configuration file
+
+	- Excelutility - functions to read and retrive values from excel File
+
+	- Listeners - 
+
+Resourses:
+
+	 drivers
+	 property file
+	 test data

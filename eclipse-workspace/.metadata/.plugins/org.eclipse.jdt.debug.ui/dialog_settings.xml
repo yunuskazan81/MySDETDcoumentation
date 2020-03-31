@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="conditionHistory">
+	</section>
+	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
+		<item key="ShowStatusLine" value="true"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode&gt;=JavaBasic/src&amp;lt;com.class2{AritmaticOperations.java[AritmaticOperations&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=JavaInstructorClassWorks/src&amp;lt;com.class26{Bank.java[BankB&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=JavaInstructorClassWorks/src&amp;lt;com.class26{Bank.java[Bank&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=JavaInstructorClassWorks/src&amp;lt;com.class26{Bank.java[BankA&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=SeleniumTestCase/\/Users\/yunuskazan\/.p2\/pool\/plugins\/org.junit_4.12.0.v201504281640\/junit.jar&amp;lt;junit.textui(TestRunner.class[TestRunner&lt;/infoNode&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_X_ORIGIN" value="206"/>
+			<item key="DIALOG_Y_ORIGIN" value="8"/>
+		</section>
+	</section>
+	<section name="AddExceptionDialog">
+		<item key="caughtChecked" value="true"/>
+		<item key="uncaughtChecked" value="true"/>
+	</section>
+	<section name="expressionHistory">
+	</section>
+</section>

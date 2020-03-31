@@ -1,0 +1,54 @@
+#Author: syntax team     //john.smith@wellfargo.com
+Feature: Add Employee 
+
+Background: 
+	Given I logged in into OrangeHrm 
+	And I click on PIM link 
+	And I click on  Add Employee link 
+	
+@smoke @addEmployee 
+Scenario Outline: Add Employee 
+	When I provide "<FirstName>", "<MiddleName>", "<LastName>" and "<Location>" 
+	And I click on save button 
+	Then I see "<FirstName>", "<LastName>" is displayed 
+	
+	Examples: 
+		| FirstName | MiddleName | LastName | Location     |
+		| Jane      | J          | Smith    | Smart Office |
+		| James     | S          | West     | West Office  |
+		| Jackie    | N          | Eats     | HQ           |
+		
+		
+		@empDetails 
+		Scenario: Add Employee and Create Login Details 
+			When I provide FirstName, MiddleName, LastName and Location 
+			
+				| FirstName | MiddleName    | LastName | Location     |
+				| John      | Jira          | Smith    | Smart Office |
+				| Jamis     | Sorry         | West     | West Office  |
+				| Jackte    | Nope          | Eats     | HQ           |
+				
+			And I click on create login details 
+			And I provide Username, Password and Confirmpassword 
+				| Username  	 | Password   	    | Confirmpassword       | 
+				| Janesmithh     | Smith3298_?      | Smith3298_?           |
+				| Jameswestt     | West3432_#       | West3432_#            |
+				| Jackieeatss    | Eats9486_!       | Eats9486_!            |
+				
+			And I click on save button 
+			
+			Then I see employee name is added successfully 
+				| EmployeeName  |
+				| John Smith    |
+				| Jamis West    |
+				| Jackte Eats   |
+		
+		
+		@temp 
+		Scenario: Add Employee Labels Verification 
+			Then I see following labels 
+				| First Name  |
+				| Middle Name |
+				| Last Name   |
+				| Employee Id |
+				| Location    |
